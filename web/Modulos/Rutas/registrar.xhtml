@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Idruta:" for="idruta" />
+                    <h:inputText id="idruta" value="#{rutaControlador.ruta.idruta}" title="Idruta" required="true" requiredMessage="The Idruta field is required."/>
+                    <h:outputLabel value="Localidad:" for="localidad" />
+                    <h:inputText id="localidad" value="#{rutaControlador.ruta.localidad}" title="Localidad" required="true" requiredMessage="The Localidad field is required."/>
+                    <h:outputLabel value="Direccion:" for="direccion" />
+                    <h:inputText id="direccion" value="#{rutaControlador.ruta.direccion}" title="Direccion" required="true" requiredMessage="The Direccion field is required."/>
+                    <h:outputLabel value="Telefono:" for="telefono" />
+                    <h:inputText id="telefono" value="#{rutaControlador.ruta.telefono}" title="Telefono" required="true" requiredMessage="The Telefono field is required."/>
+                    <h:outputLabel value="Imagen:" for="imagen" />
+                    <h:inputTextarea rows="4" cols="30" id="imagen" value="#{rutaControlador.ruta.imagen}" title="Imagen" />
+                    <h:outputLabel value="Observacion:" for="observacion" />
+                    <h:inputText id="observacion" value="#{rutaControlador.ruta.observacion}" title="Observacion" required="true" requiredMessage="The Observacion field is required."/>
+                    <h:outputLabel value="PedidoIdpedido:" for="pedidoIdpedido" />
+                    <h:selectOneMenu id="pedidoIdpedido" value="#{rutaControlador.pedido.idpedido}" title="PedidoIdpedido" required="true" requiredMessage="The PedidoIdpedido field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{pedidoControlador.listarPedidos()}" var="p" itemValue="#{p.idpedido}" itemLabel="#{p.estado}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandButton value="Registrar" action="#{rutaControlador.create()}"/>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

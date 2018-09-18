@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Documento:" for="documento" />
+                    <h:inputText id="documento" value="#{adminControlador.usuario.documento}" title="Documento" />
+                    <h:outputLabel value="Nombres:" for="nombres" />
+                    <h:inputText id="nombres" value="#{adminControlador.usuario.nombres}" title="Nombres" />
+                    <h:outputLabel value="Apellidos:" for="apellidos" />
+                    <h:inputText id="apellidos" value="#{adminControlador.usuario.apellidos}" title="Apellidos" />
+                    <h:outputLabel value="Direccion:" for="direccion" />
+                    <h:inputText id="direccion" value="#{adminControlador.usuario.direccion}" title="Direccion" />
+                    <h:outputLabel value="Telefono:" for="telefono" />
+                    <h:inputText id="telefono" value="#{adminControlador.usuario.telefono}" title="Telefono" />
+                    <h:outputLabel value="Estado:" for="estado" />
+                    <h:inputText id="estado" value="#{adminControlador.usuario.estado}" title="Estado" />
+                    <h:outputLabel value="Email:" for="email" />
+                    <h:inputText id="email" value="#{adminControlador.usuario.email}" title="Email" />
+                    <h:outputLabel value="Clave:" for="clave" />
+                    <h:inputText id="clave" value="#{adminControlador.usuario.clave}" title="Clave" />
+                    <h:outputLabel value="RolIdRol:" for="rolIdRol" />
+                    <h:selectOneMenu id="rolIdRol" value="#{adminControlador.rol.idRol}" title="RolIdRol" required="true" requiredMessage="The RolIdRol field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{rolControlador.listaRol()}" var="t" itemValue="#{t.idRol}" itemLabel="#{t.nombre}"/>
+                    </h:selectOneMenu>
+                    <h:commandButton value="Registrar" action="#{adminControlador.create()}"/>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

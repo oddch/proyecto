@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link rel="icon" href="../Merkaruta/img/fav-icon.png" type="image/x-icon" />
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Merkaruta</title>
+
+        <!-- Icon css link -->
+        <link href="../Merkaruta/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="../Merkaruta/vendors/elegant-icon/style.css" rel="stylesheet"/>
+        <link href="../Merkaruta/vendors/themify-icon/themify-icons.css" rel="stylesheet"/>
+        <!-- Bootstrap -->
+        <link href="../Merkaruta/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../Merkaruta/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Rev slider css -->
+        <link href="../Merkaruta/vendors/revolution/css/settings.css" rel="stylesheet"/>
+        <link href="../Merkaruta/vendors/revolution/css/layers.css" rel="stylesheet"/>
+        <link href="../Merkaruta/vendors/revolution/css/navigation.css" rel="stylesheet"/>
+        <link href="../Merkaruta/vendors/animate-css/animate.css" rel="stylesheet"/>
+
+        <!-- Extra plugin css -->
+        <link href="../Merkaruta/vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet"/>
+
+        <link href="../Merkaruta/css/style.css" rel="stylesheet"/>
+        <link href="../Merkaruta/css/responsive.css" rel="stylesheet"/>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <h:body>
+
+        <!--================Search Area =================-->
+        <section class="search_area">
+            <div class="search_inner">
+                <input type="text" placeholder="Enter Your Search..."/>
+                <i class="ti-close"></i>
+            </div>
+        </section>
+        <!--================End Search Area =================-->
+
+        <!--================Header Menu Area =================-->
+
+        <header class="main_menu_area">
+            <nav class="navbar">
+                <img src="../Merkaruta/img/img/LogoOficial.png" alt=""/>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                </button>
+                <nav class="navbar navbar-dark bg-dark">
+
+                    <nav class="navbar navbar-expand-lg navbar-light bg-facebook">
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="http://localhost:8080/SystemMerkaruta/faces/empleado/Catalogo.xhtml"><button type="button" class="btn btn-success btn-sm"><i class="fa fa-home"></i> INICIO </button> </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:8080/SystemMerkaruta/faces/empleado/EliminarContactos.xhtml"><button type="button" class="btn btn-primary btn-sm"><i class="fa fa-archive"></i> Eliminar</button> </a>
+                                </li>
+
+                                <li class="nav-item">
+
+                                    <a class="nav-link" href="http://localhost:8080/SystemMerkaruta/faces/empleado/EnvioMasivo.xhtml"><button type="button" class="btn btn-primary btn-sm"><i class="fa fa-users"></i>ENVIAR CORREOS</button> </a>
+                                </li>
+
+                                <li class="nav-item">
+
+                                    <a class="nav-link" href="https://getbootstrap.com/docs/4.1/components/navbar/"><button type="button" class="btn btn-primary btn-sm"><i class="fa fa-leaf"></i> Novedades</button></a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </nav>
+
+
+                    <a class="nav-link" href="https://getbootstrap.com/docs/4.1/components/navbar/"><button type="button" class="btn btn-danger btn-sm"><i class="fa fa-user-circle"></i> Mi Sesion</button></a>
+
+                </nav>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                </div>
+            </nav>
+        </header>
+
+        
+        <h:form style="margin-top: 100px;">
+                <h1><i class="fa fa-newspaper-o fa-2x"></i> <h:outputText value="Lista de solicitudes"/></h1>
+                <b:dataTable value="#{contactoControlador.listaContacto()}" var="item">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Fecha"/>
+                        </f:facet>
+                        <h:outputText value="#{item.fecha}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Asunto"/>
+                        </f:facet>
+                        <h:outputText value="#{item.asunto}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Email"/>
+                        </f:facet>
+                        <h:outputText value="#{item.email}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Solicitud"/>
+                        </f:facet>
+                        <h:outputText value="#{item.solicitud}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Mensaje"/>
+                        </f:facet>
+                        <h:outputText value="#{item.mensaje}"/>
+                    </h:column>
+                </b:dataTable>
+            </h:form>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="../Merkaruta/js/jquery-3.2.1.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../Merkaruta/js/popper.min.js"></script>
+        <script src="../Merkaruta/js/bootstrap.min.js"></script>
+        <!-- Rev slider js -->
+        <script src="../Merkaruta/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+        <script src="../Merkaruta/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="../Merkaruta/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+        <script src="../Merkaruta/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+        <script src="../Merkaruta/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script src="../Merkaruta/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script src="../Merkaruta/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script src="../Merkaruta/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <!-- Extra plugin css -->
+        <script src="../Merkaruta/vendors/counterup/jquery.waypoints.min.js"></script>
+        <script src="../Merkaruta/vendors/counterup/jquery.counterup.min.js"></script>
+        <script src="../Merkaruta/vendors/counterup/apear.js"></script>
+        <script src="../Merkaruta/vendors/counterup/countto.js"></script>
+        <script src="../Merkaruta/vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="../Merkaruta/vendors/parallaxer/jquery.parallax-1.1.3.js"></script>
+        <!--Tweets-->
+        <script src="../Merkaruta/vendors/tweet/tweetie.min.js"></script>
+        <script src="../Merkaruta/vendors/tweet/script.js"></script>
+
+        <script src="../Merkaruta/js/theme.js"></script>
+    </h:body>
+</html>

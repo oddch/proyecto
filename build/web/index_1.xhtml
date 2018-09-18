@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:p="http://primefaces.org/ui" >
+    <h:head>
+        <title>Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="css/bootstrap.css" />
+        <h:outputStylesheet name="css/bootstrap-grid.css" />
+        <h:outputStylesheet name="css/estilos.css" />
+        <h:outputScript  name="js/jquery-1.12.3.min.js"/>
+        <h:outputScript  name="js/bootstrap.js"/>
+        <link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <div class="row text-center">
+            <br/>
+            <br/>
+        </div>
+
+
+        <div class="row ">
+
+            <div class="col-1"></div>
+
+            <div class="col-7">
+                <h:form>
+                    <div class="row text-center">
+
+                        <div class="col-4"></div>
+
+                        <div class="col-8">
+                            <br/>
+                            <h4>Ingresar al Sistema</h4>	
+                            <br/>
+                            <img src=""  height="140" width="240" style="opacity: 0.7; "/>
+                            <div class="form-group">
+                                <br/>
+                                <p:outputLabel value="usuario" for="usuario"/><br/>
+                                <h:inputText title="usuario" id="usuario" value="#{usuario.usuario.email}">
+                                    <p:message for="usuario" />
+                                </h:inputText>
+                            </div>
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                                <br/>
+                                <p:outputLabel value="contrasenia" for="contrasenia"/><br/>
+                                <div class="form-group row">
+                                    <h:inputSecret title="contrasenia" id="contrasenia" value="#{usuario.usuario.clave}">
+                                        <p:message for="contrasenia" />
+                                    </h:inputSecret>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h:commandButton  value="Ingresar" action="#{usuario.iniciarSesion()}"></h:commandButton>
+                                <br/>
+                                <h7 >¿Desea registrarse? <a href="CrearUsuario.xhtml"> Crear cuenta</a></h7> 
+                                <h7 ><a href="#">Olvide la Contraseña</a></h7>
+                            </div>
+                        </div>		
+                    </div>
+                </h:form>          
+                <div class="col-1"></div>
+            </div>
+        </div>   
+    </h:body>
+</html>
+

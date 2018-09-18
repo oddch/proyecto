@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandButton value="Ventas"  class="btn btn-danger" actionListener="#{rp.reprteVentasRealizadasPorMes()}"/>
+            <h:commandButton value="Productos"  class="btn btn-danger" actionListener="#{rp.reporteProductos()}"/>
+            <h:commandButton value="Usuarios"  class="btn btn-danger" actionListener="#{rp.reporteUsuarios()}"/>
+            <h:commandButton value="promocion"  class="btn btn-danger" actionListener="#{rp.promocionReporte}"/>
+            
+        </h:form>
+    </h:body>
+</html>
+

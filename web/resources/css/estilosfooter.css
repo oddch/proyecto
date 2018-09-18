@@ -1,0 +1,91 @@
+*{
+	box-sizing: border-box;
+	font-family: "Khula", sans-serif;
+
+	
+}
+body{
+	width: 100%;
+}
+
+
+footer{
+	padding:1%;
+	width: 100%;
+	height: 35%;
+	background-color: #4C5E7C;
+	float: 	left;
+		
+}
+
+.contenedorfooter{
+	height: 100%;
+	background-color: #4C5E7C; 
+	
+}
+
+.cajafooter{
+	height: 100%;
+	float: left;
+	width: 20%;
+	padding: 2% 2% 0% 2%;
+	background-color: #4C5E7C;
+	color: #fff;
+}
+
+.clearfoot{
+	list-style:none;
+	color: #ddd;
+	background-color: #4C5E7C;
+	padding: 7% 0px 0px 0px;
+}
+
+.clearfoot:hover{
+	text-decoration: none;
+	color: orange;
+}
+
+.title{
+	color: orange;
+}
+
+.help-block{
+	margin: 0;
+	text-align: left;
+}
+
+.checkbox{
+	float: left;
+	padding-bottom: 10px;
+}
+
+span.help-block{
+	float: left;
+}
+
+a.icon-info-circle{
+	float: right;
+	font-size: 18px;
+	text-decoration: none;
+}
+.nextsec {
+    width: 60px;
+    height: 50px;
+    margin-top: 350px;
+}
+.glyphicon-log-in:before {
+    content: "\e161";
+    margin-right: 10px;
+}
+.glyphicon-lock:before {
+    content: "\e033";
+    margin-right: 10px;
+}
+
+.jumbotron h1, .jumbotron .h1 {
+    font-size: 63px;
+    color: cadetblue;
+    margin-right: 1000px;
+    margin-top: 150px;
+    
+}

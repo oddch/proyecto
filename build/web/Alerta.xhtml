@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link href="sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </h:head>
+    <h:body>
+        <h:outputLabel>
+            <button type="button" onclick="$('#correoModal').hide();
+                    swal('Enviando correos!!');" class="btn btn-purple waves-effect waves-light"> <span>ENVIAR</span> <i class="fa fa-send m-l-10"></i> </button>
+            <f:ajax event="click" listener="#{administradorView.envioMasivo()}" ></f:ajax>
+        </h:outputLabel> 
+        <script>
+            swal("Oops", "Something went wrong!", "error");
+        </script>
+
+    </h:body>
+</html>
+

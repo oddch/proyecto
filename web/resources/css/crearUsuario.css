@@ -1,0 +1,338 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+}
+
+.navbar-default{
+	margin-bottom: 0px;
+}
+
+.container-fluid{
+	padding: 0px;
+}
+
+.back{
+	background-color: #1A3457;
+}
+
+#allnavbar{
+	padding-left: 40px;
+}
+
+
+.navbar-collapse ul{
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #1A3457;
+	
+}
+
+.navbar-collapse ul li{
+	background-color: #1A3457;
+}
+nav a{
+	display: block;	
+	background-color: #1A3457;
+	padding: 13.5px 0px;
+	text-align: center;
+	color: #E6F0FF;
+	text-decoration: none;
+	width: 140px;
+	border-bottom: 1px solid #1A3457;
+	font-size: 14px;
+}
+
+.navbar-collapse li ul{
+	display: none;
+	position: absolute;
+}
+
+.navbar-collapse li:hover>ul{
+	display: block;
+}
+
+.navbar-collapse ul li ul li{
+	position: relative;
+}
+
+.navbar-collapse ul li ul li ul{
+	left: 140px;
+	top: 0px;
+}
+
+.navbar-collapse>ul>li{
+	display: inline-block;
+}
+
+nav a:hover{
+	color: #FFB00A;
+	text-decoration: none;
+}
+
+.navbar.back{
+	background-color: #1A3457;
+}
+
+.nopad{
+	padding: 0px;
+}
+
+.imgnav{
+	width: 75px;
+	height: 45px;
+	margin-left: 10px;
+	background-color: transparent;
+}
+
+.stylefont{
+	font-size: 100%;	
+}
+
+.stylefontphone{
+	font-size: 22px;
+	background-color: transparent;
+}
+
+.topin{
+	position: relative;
+	left: -30px;
+	top: -13px;
+	width: 100px;
+	padding: 0px;
+}
+
+.navbar-brand.home{
+	height: 50px;
+	width: 60px;
+	padding-top: 5px;
+	border-bottom: 0px;
+	position: relative;
+	z-index: 1;
+}
+
+.col-md-4.derecha{
+	position: relative;
+	float:right;
+	background-color: transparent;
+	padding-left: 0px;
+}
+
+.home.logout{
+	float: right;
+	background-color: #1A3457;
+	margin-top: 0px;
+}
+
+.noneclose{
+	background-color: #fff;
+}
+
+.col-md-12.noneclose{
+	padding-top: 10px;
+}
+
+.col-md-11.noneclose{
+	padding-top: 15px;
+}
+
+li.noneclose a{
+	background-color: transparent;	
+	font-size: 14px;
+	color: #0096DA;
+	border: none;
+	padding: 10px;
+}
+
+.contenedorsesion{
+	float: left;
+	padding: 20px;
+	background-color:#eeeef9;
+	border: 2px solid #E4E4F5;
+	border-radius: 7px;
+	text-align: center;	
+}
+
+#pass{
+	background-color: #2A6598;
+	color: #fff;
+	margin-bottom: 20px;
+	margin-top: 25px;
+	border-radius: 2px 
+}
+
+.modal.bs-example-modal-sm{
+	background-color: rgba(11, 22, 74, 0.5);
+}
+
+.fontuser{
+	font-size: 20px;
+	background-color: transparent;
+}
+
+.cambioPass{
+	background-color: transparent;
+}
+
+.droplog{
+	width: auto;
+}
+
+.closess{
+	width: auto;
+	margin: 10px;
+}
+
+.closess.derecha{
+	float: right
+}
+
+.dropdown-footer{
+	background-color: #eeeef9;
+}
+
+.fontuser{
+	font-size: 18px;
+	background-color: transparent;
+}
+
+.col-md-12 h4{
+	background-color: transparent;
+	color: 	#1A3457
+}
+
+.submenu{
+	background-color: #2F486B;
+	z-index: 2;
+}
+
+.submenu2{
+	background-color: #3E5677;
+	z-index: 2;
+}
+
+section{
+	padding-left: 7%;
+	position: absolute;	
+	z-index: -1;
+
+	width:100%;
+	text-align: center;
+	background-color: #eeeef9;
+	float: left;
+	font-family: serif;
+	font-size: 130%;
+	margin-top: 55px;
+	height: 700px
+}
+
+.backbread{
+	text-align: left;
+	padding-right: 0px;
+	padding-left: 0px;
+	background-color: transparent;
+}
+
+.breadcrumb{
+	margin-bottom: 10px;
+}
+
+.col-md-11.backsec{
+	background-color: #eeeef9;
+}
+
+.col-md-12 a:hover{
+	text-decoration: none;
+}
+
+.col-md-12.user{
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.col-md-11 h1{
+	background-color: transparent;
+	color: #fff;
+	margin: 40px 0px;	
+}
+
+.col-md-4 BR{
+	margin: 2px;
+}
+
+.col-md-11.user{
+	background-color: transparent;
+	margin-left: 5%;
+
+}
+
+.col-md-11.user h1{
+	background-color: #fff;
+	font-size: 30px;
+	color: #1A3457;
+	font-weight: bold;
+	margin-top: 35px;
+	margin-bottom: 20px;
+}
+
+.col-md-8 h1{
+	color: #1A3457;
+	margin: 25px 0px;
+	background-color: transparent;
+}
+
+.col-md-8.user{
+	background-color: #fff;
+}
+
+.btnsfinal{
+	margin: 25px;
+}
+
+.btnsclose{
+	margin: 0px 5px; 
+}
+
+.btnsclose.left{
+	margin-left: 50px; 
+}
+
+.backnone{
+	background-color: #fff;
+}
+
+.fullback{
+	background-color: #fff;
+}
+
+span.help-block{
+	float: left;
+	text-align: left;
+	background-color: transparent;
+}
+
+a.icon-info-circle{
+	float: right;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.control-label{
+	float: left;
+}
+
+#idFormat{
+	padding: 6px 0px;
+	text-align: center; 
+}
+.backnone {
+    background-color: #fff;
+    margin-top: 20px;
+}
